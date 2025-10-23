@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abu Hanif | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Typing cursor effect */
+    .typing-text {
+      border-right: 3px solid #3b82f6;
+      padding-right: 5px;
+      white-space: nowrap;
+      overflow: hidden;
+      display: inline-block;
+      animation: blinkCursor 0.8s infinite;
+      min-height: 30px;
+      transition: all 0.3s ease-in-out;
+    }
+    @keyframes blinkCursor {
+      0%, 100% { border-color: transparent; }
+      50% { border-color: #3b82f6; }
+    }
+
+    /* Button style for About section */
+    .btn {
+      display: inline-block;
+      background-color: #2563eb; /* blue-600 */
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #1d4ed8; /* blue-700 */
+    }
+    @media (prefers-color-scheme: dark) {
+      .btn {
+        background-color: #3b82f6; /* blue-500 */
+        color: white;
+      }
+      .btn:hover {
+        background-color: #2563eb; /* blue-600 */
+      }
+    }
+  </style>
+</head>
+<body class="bg-[#0d1224] dark:bg-gray-900 text-white dark:text-gray-100 min-h-screen transition-colors duration-500" id="body">
+
+  <!-- ===== Navbar ===== -->
+  <header class="fixed top-0 left-0 w-full bg-[#0d1224]/90 dark:bg-gray-800/90 backdrop-blur-md shadow-md z-50 transition">
+    <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+      <h1 class="text-2xl font-bold text-blue-400 dark:text-blue-500">Abu Hanif</h1>
+
+      <!-- Clock -->
+      <div id="clock" class="text-yellow-400 dark:text-yellow-300 text-sm md:text-base font-mono"></div>
+
+      <!-- Menu (Desktop) -->
+      <nav class="hidden md:flex space-x-8 text-gray-300 dark:text-gray-300 font-medium">
+        <a href="#home" class="hover:text-blue-400 dark:hover:text-blue-500 transition">Home</a>
+        <a href="#about" class="hover:text-blue-400 dark:hover:text-blue-500 transition">About</a>
+        <a href="#skills" class="hover:text-blue-400 dark:hover:text-blue-500 transition">Skills</a>
+        <a href="#services" class="hover:text-blue-400 dark:hover:text-blue-500 transition">Services</a>
+        <a href="#portfolio" class="hover:text-blue-400 dark:hover:text-blue-500 transition">Portfolio</a>
+        <a href="#contact" class="hover:text-blue-400 dark:hover:text-blue-500 transition">Contact</a>
+      </nav>
+
+      <!-- Right Side Buttons -->
+      <div class="flex items-center gap-3">
+        <button id="theme-toggle" class="text-xl focus:outline-none">🌙</button>
+        <button id="menu-btn" class="md:hidden text-2xl focus:outline-none">☰</button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <nav id="mobile-menu" class="hidden md:hidden flex flex-col bg-[#10172a] dark:bg-gray-800 text-center text-gray-300 dark:text-gray-300">
+      <a href="#home" class="py-2 hover:text-blue-400 dark:hover:text-blue-500 transition">Home</a>
+      <a href="#about" class="py-2 hover:text-blue-400 dark:hover:text-blue-500 transition">About</a>
+      <a href="#skills" class="py-2 hover:text-blue-400 dark:hover:text-blue-500 transition">Skills</a>
+      <a href="#services" class="py-2 hover:text-blue-400 dark:hover:text-blue-500 transition">Services</a>
+      <a href="#portfolio" class="py-2 hover:text-blue-400 dark:hover:text-blue-500 transition">Portfolio</a>
+      <a href="#contact" class="py-2 hover:text-blue-400 dark:hover:text-blue-500 transition">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ===== Hero Section ===== -->
+  <section id="home" class="flex flex-col md:flex-row items-center justify-between w-11/12 max-w-6xl mx-auto py-32 md:py-40 transition-colors duration-500">
+    
+    <!-- Left Text Section -->
+    <div class="max-w-lg space-y-5 mt-20 md:mt-0">
+      <h3 class="text-lg font-semibold text-blue-400 dark:text-blue-500">Hey, I'm</h3>
+      <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white">ABU HANIF</h1>
+      <h2 class="text-xl text-blue-300 dark:text-blue-400 font-medium typing-text"></h2>
+      <p class="text-gray-400 dark:text-gray-300 leading-relaxed">
+        High level experience in web design and development, producing quality and creative work.
+      </p>
+
+      <a href="#contact" 
+         class="inline-block mt-5 bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white dark:text-white px-6 py-3 rounded-lg shadow-lg transition">
+         Contact Me →
+      </a>
+    </div>
+
+    <!-- Right Image -->
+    <div class="mt-10 md:mt-0">
+      <img src="image/abu hanif.JPG" alt="Abu Hanif" 
+           class="rounded-full w-64 h-64 object-cover ring-4 ring-blue-500 dark:ring-blue-400 shadow-xl transition-transform duration-700 hover:scale-105" />
+    </div>
+  </section>
+
+  <!-- ===== About Section ===== -->
+  <section id="about" class="bg-[#0f172a] dark:bg-gray-900 text-white dark:text-gray-100 py-16 px-6 transition-colors duration-500">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
+    
+    <!-- Profile Image -->
+    <img src="image/hacker.jpeg" alt="Abu Hanif" class="w-60 h-60 md:h-72 md:w-72 rounded-lg shadow-lg object-cover ring-2 ring-blue-500 dark:ring-blue-400 transition-transform duration-500 hover:scale-105" />
+
+    <!-- About Text -->
+    <div class="flex-1">
+      <h2 class="text-3xl font-bold mb-4 dark:text-white">About Me</h2>
+      <p class="text-gray-300 dark:text-gray-300 mb-6 leading-relaxed">
+        I am a frontend developer skilled in React, Tailwind CSS, and modern web technologies. 
+        I enjoy creating responsive, interactive, and visually appealing web applications that provide excellent user experiences.
+      </p>
+
+      <!-- Stats -->
+      <div class="flex flex-wrap gap-6 mb-6">
+        <div class="flex flex-col">
+          <h3 class="text-2xl font-bold dark:text-white">05+</h3>
+          <p class="text-sm dark:text-gray-300">Years Experience</p>
+        </div>
+        <div class="flex flex-col">
+          <h3 class="text-2xl font-bold dark:text-white">40+</h3>
+          <p class="text-sm dark:text-gray-300">Projects</p>
+        </div>
+        <div class="flex flex-col">
+          <h3 class="text-2xl font-bold dark:text-white">05+</h3>
+          <p class="text-sm dark:text-gray-300">Companies</p>
+        </div>
+      </div>
+
+      <!-- Download CV Button -->
+      <a href="abu-hanif-cv.pdf" download class="inline-block bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white font-medium px-6 py-3 rounded-lg shadow-lg transition">
+        Download CV
+      </a>
+    </div>
+  </div>
+</section>
+
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // Mobile Menu Toggle
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    // Typing Animation
+    const textArray = ["Web Developer", "Frontend Designer", "JavaScript Enthusiast"];
+    const typingText = document.querySelector(".typing-text");
+    let textIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function typeEffect() {
+      const currentText = textArray[textIndex];
+      const speed = isDeleting ? 60 : 120;
+
+      typingText.textContent = currentText.substring(0, charIndex);
+      if (!isDeleting && charIndex < currentText.length) {
+        charIndex++;
+      } else if (isDeleting && charIndex > 0) {
+        charIndex--;
+      } else {
+        if (!isDeleting) {
+          isDeleting = true;
+          setTimeout(typeEffect, 1000);
+          return;
+        } else {
+          isDeleting = false;
+          textIndex = (textIndex + 1) % textArray.length;
+        }
+      }
+      setTimeout(typeEffect, speed);
+    }
+    document.addEventListener("DOMContentLoaded", typeEffect);
+
+    // Digital Clock
+    function updateClock() {
+      const now = new Date();
+      const hours = String(now.getHours()).padStart(2, "0");
+      const minutes = String(now.getMinutes()).padStart(2, "0");
+      const seconds = String(now.getSeconds()).padStart(2, "0");
+      document.getElementById("clock").textContent = `${hours}:${minutes}:${seconds}`;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    // Dark / Light Mode Toggle
+    const body = document.getElementById("body");
+    const themeToggle = document.getElementById("theme-toggle");
+
+    if (localStorage.getItem("theme") === "light") {
+      document.documentElement.classList.add("dark");
+      themeToggle.textContent = "☀️";
+    }
+
+    themeToggle.addEventListener("click", () => {
+      document.documentElement.classList.toggle("dark");
+      const isDark = document.documentElement.classList.contains("dark");
+      themeToggle.textContent = isDark ? "☀️" : "🌙";
+      localStorage.setItem("theme", isDark ? "light" : "dark");
+    });
+   </script>
+
+
+<section id="skills" class="bg-[#0f172a] dark:bg-gray-900 text-white py-16 px-4 transition-colors duration-500">
+  <div class="max-w-5xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-2 dark:text-white">Skills</h2>
+    <p class="text-gray-400 dark:text-gray-300 mb-10">My technical level</p>
+
+    <div class="grid md:grid-cols-2 gap-10 text-left">
+
+      <!-- Frontend Developer -->
+      <div>
+        <h3 class="text-xl font-semibold mb-2 dark:text-white">🖥 Frontend Developer</h3>
+        <p class="text-sm text-gray-400 dark:text-gray-300 mb-4">More than 4 years</p>
+
+        <div class="space-y-4">
+          <div class="skill-bar">
+            <div class="flex justify-between text-sm dark:text-gray-200"><span>HTML</span><span>90%</span></div>
+            <div class="w-full h-2 bg-gray-700 dark:bg-gray-600 rounded">
+              <div class="h-2 bg-blue-500 rounded w-0" data-width="90%"></div>
+            </div>
+          </div>
+
+          <div class="skill-bar">
+            <div class="flex justify-between text-sm dark:text-gray-200"><span>CSS</span><span>80%</span></div>
+            <div class="w-full h-2 bg-gray-700 dark:bg-gray-600 rounded">
+              <div class="h-2 bg-blue-400 rounded w-0" data-width="80%"></div>
+            </div>
+          </div>
+
+          <div class="skill-bar">
+            <div class="flex justify-between text-sm dark:text-gray-200"><span>MongoDB</span><span>55%</span></div>
+            <div class="w-full h-2 bg-gray-700 dark:bg-gray-600 rounded">
+              <div class="h-2 bg-green-400 rounded w-0" data-width="55%"></div>
+            </div>
+          </div>
+
+          <div class="skill-bar">
+            <div class="flex justify-between text-sm dark:text-gray-200"><span>Express.js</span><span>50%</span></div>
+            <div class="w-full h-2 bg-gray-700 dark:bg-gray-600 rounded">
+              <div class="h-2 bg-emerald-400 rounded w-0" data-width="50%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Backend Developer -->
+      <div>
+        <h3 class="text-xl font-semibold mb-2 dark:text-white">⚙️ Backend Developer</h3>
+        <p class="text-sm text-gray-400 dark:text-gray-300 mb-4">Building APIs & Databases</p>
+
+        <div class="space-y-4">
+          <div class="skill-bar">
+            <div class="flex justify-between text-sm dark:text-gray-200"><span>Node.js</span><span>0%</span></div>
+            <div class="w-full h-2 bg-gray-700 dark:bg-gray-600 rounded">
+              <div class="h-2 bg-green-500 rounded w-0" data-width="0%"></div>
+            </div>
+          </div>
+
+          <div class="skill-bar">
+            <div class="flex justify-between text-sm dark:text-gray-200"><span>MySQL</span><span>0%</span></div>
+            <div class="w-full h-2 bg-gray-700 dark:bg-gray-600 rounded">
+              <div class="h-2 bg-blue-500 rounded w-0" data-width="0%"></div>
+            </div>
+          </div>
+
+          <div class="skill-bar">
+            <div class="flex justify-between text-sm dark:text-gray-200"><span>API Integration</span><span>0%</span></div>
+            <div class="w-full h-2 bg-gray-700 dark:bg-gray-600 rounded">
+              <div class="h-2 bg-purple-500 rounded w-0" data-width="0%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Animation Script -->
+  <script>
+    const skillBars = document.querySelectorAll('.skill-bar div[data-width]');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const bar = entry.target;
+          bar.style.width = bar.dataset.width;
+          bar.style.transition = 'width 1.5s ease-in-out';
+          observer.unobserve(bar);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    skillBars.forEach(bar => observer.observe(bar));
+  </script>
+</section>
+
+</body>
+</html>
